@@ -1,4 +1,13 @@
 // First let's import bootstrap for the compile
-@import "bootstrap-4.1.0/scss/bootstrap";
+@import "bootstrap/scss/bootstrap";
+
+// First, let's setup global styles
+@import 'global';
+
+// Section styles
+@import 'header';
+@import 'footer';
+@import 'menu';
 
 // Now let's deal with out dependencies
+@import 'home';
