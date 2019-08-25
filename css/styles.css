@@ -7395,17 +7395,18 @@ header .header-sub-heading {
   #menu-logo-container:hover {
     filter: invert(1); }
 
-#header-menu-container {
+#header-menu-spacer {
   position: absolute;
   left: 10em;
   right: 0;
   top: 0;
-  bottom: 0;
+  bottom: 0; }
+
+#header-menu-container {
   background: rgba(255, 255, 255, 0.75);
-  padding-right: 1em;
   letter-spacing: 0;
-  font-size: 0;
-  text-align: right; }
+  text-align: right;
+  font-size: 0; }
   #header-menu-container .menu {
     height: 100%; }
   #header-menu-container ul {
@@ -7414,7 +7415,8 @@ header .header-sub-heading {
     list-style: none;
     height: 100%;
     display: inline-block;
-    text-align: right; }
+    text-align: right;
+    font-size: 0; }
     #header-menu-container ul li.current-menu-item a {
       background-color: rgba(0, 0, 0, 0.5);
       color: rgba(255, 255, 255, 0.8);
