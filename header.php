@@ -5,9 +5,13 @@
 
 	<title><?php bloginfo( 'name' ); ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8"/>
 
-	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,700,300">
-	<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/css/styles.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon.png" />
+
+    <!-- FontAwesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
 
 	<?php wp_head(); ?>
 
@@ -29,6 +33,13 @@
         .addTo(controller);
       }); 
     </script>
+
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,700,300">
+	<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/css/styles.css">
+
 </head>
 
 <body>
+
+<!-- Include the template and code for the model search box -->
+<?php get_template_part('parts/search-modal'); ?>

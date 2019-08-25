@@ -7401,7 +7401,11 @@ header .header-sub-heading {
   right: 0;
   top: 0;
   bottom: 0;
-  background: rgba(255, 255, 255, 0.75); }
+  background: rgba(255, 255, 255, 0.75);
+  padding-right: 1em;
+  letter-spacing: 0;
+  font-size: 0;
+  text-align: right; }
   #header-menu-container .menu {
     height: 100%; }
   #header-menu-container ul {
@@ -7409,30 +7413,131 @@ header .header-sub-heading {
     margin: 0px;
     list-style: none;
     height: 100%;
-    width: 100%;
     display: inline-block;
-    text-align: right;
-    padding-right: 1em; }
-    #header-menu-container ul li {
-      display: inline-block;
+    text-align: right; }
+    #header-menu-container ul li.current-menu-item a {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none; }
+  #header-menu-container .menu-item {
+    display: inline-block;
+    height: 100%;
+    line-height: 5em;
+    margin: 0px;
+    padding: 0px;
+    font-size: 12pt; }
+    #header-menu-container .menu-item a {
+      display: block;
       height: 100%;
-      line-height: 5em;
-      margin: 0px; }
-      #header-menu-container ul li a {
-        display: block;
-        height: 100%;
-        vertical-align: middle;
-        color: rgba(0, 0, 0, 0.8);
-        padding-left: 1em;
-        padding-right: 1em;
-        transition: background-color 0.2s; }
-        #header-menu-container ul li a:hover {
-          background-color: rgba(0, 0, 0, 0.5);
-          color: rgba(255, 255, 255, 0.8);
-          text-decoration: none; }
-      #header-menu-container ul li ul {
-        display: none; }
+      vertical-align: middle;
+      color: rgba(0, 0, 0, 0.8);
+      padding-left: 1em;
+      padding-right: 1em;
+      transition: background-color 0.2s; }
+      #header-menu-container .menu-item a:hover {
+        background-color: #301934;
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none; }
+    #header-menu-container .menu-item ul {
+      display: none; }
+  #header-menu-container #search-icon {
+    display: inline-block;
+    color: black;
+    padding: 0 20px 0 20px; }
+    #header-menu-container #search-icon:hover {
+      background-color: #301934;
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      cursor: pointer; }
 
+.modal-bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0s, opacity 0.25s linear; }
+
+.modal-bg:hover {
+  cursor: url("../img/modal-close-cursor.png"), auto; }
+
+.modal-toggle {
+  display: none; }
+
+.modal-toggle:checked + .modal-bg {
+  visibility: visible;
+  opacity: 1.0; }
+
+.modal-box {
+  margin: 20% 10%;
+  background-color: rgba(255, 255, 255, 0.8); }
+
+/** Search Modal **/
+#modal-search-box {
+  position: relative; }
+
+#search-button {
+  display: none;
+  font-family: 'BebasNeueLight', sans-serif;
+  line-height: 40pt;
+  height: 41.5pt;
+  font-size: 28pt;
+  letter-spacing: 1pt;
+  width: 10rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-left: none;
+  border-radius: 0px; }
+
+#search-button:hover {
+  background-color: rgba(0, 0, 0, 0.3); }
+
+#search-text {
+  display: block;
+  line-height: 40pt;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20pt;
+  width: 100%;
+  text-indent: 1em;
+  border: none;
+  border-radius: 0px; }
+
+#search-text-container {
+  display: inline-block;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20pt;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  border: none;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 0px; }
+
+@media screen and (min-width: 64em) {
+  .modal-box {
+    margin: 20% 20%; }
+
+  #search-button {
+    display: inline-block; }
+
+  #search-text-container {
+    right: 10rem; } }
+@media screen and (min-width: 102em) {
+  .modal-box {
+    margin: 20% 30%; } }
 .home-background-image {
   background-image: url("../img/LLOri_hubble_4806_dark.jpg"); }
 

@@ -3,7 +3,7 @@
 add_theme_support( 'post-thumbnails' ); /// Needed for featured images
 
 function register_menus() {
-  register_nav_menu('header',__( 'Header Menu' ));
+  register_nav_menus( array( 'header' => 'Header Menu' ));
 }
 
 function register_widget_areas() {
@@ -17,7 +17,7 @@ function register_widget_areas() {
 	) );
 }
 
-add_action( 'init', 'register_menus' );
+add_action( 'after_setup_theme', 'register_menus' );
 add_action( 'init', 'register_widget_areas' );
 
 ?>
