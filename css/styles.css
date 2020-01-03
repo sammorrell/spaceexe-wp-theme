@@ -7327,8 +7327,7 @@ html, body {
   width: 100%;
   position: relative;
   text-align: center;
-  position: relative;
-  z-index: 1000; }
+  position: relative; }
 
 .header-vertical-spacer {
   height: 30%;
@@ -7482,6 +7481,9 @@ header .header-sub-heading {
 /** Search Modal **/
 #modal-search-box {
   position: relative; }
+
+#modal-box {
+  z-index: 1000; }
 
 #search-button {
   display: none;
