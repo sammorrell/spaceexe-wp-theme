@@ -1,4 +1,4 @@
-<div class='width-sizer' id='header-container'>
+<div class='container' id='header-container'>
 	<a id='menu-logo-container' href='<?php echo get_site_url(); ?>'>
 	</a>
 	<div id='header-menu-spacer'>

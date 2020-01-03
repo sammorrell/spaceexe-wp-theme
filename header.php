@@ -38,7 +38,6 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/css/styles.css">
 
 </head>
-
 <body>
 
 <!-- Include the template and code for the model search box -->
