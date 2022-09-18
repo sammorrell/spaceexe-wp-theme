@@ -1,7 +1,43 @@
 .home-background-image {
-  background-image: url('../img/LLOri_hubble_4806_dark.jpg');
+  background-image: url('../img/background.jpg');
 }
 
 #home-background-cover {
-  background-image: url('../img/LLOri_hubble_4806_dark.jpg');
+  background-image: url('../img/background.jpg');
+}
+
+.home-background-gradient {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.0));
+}
+
+.home-header-uoe-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 32pt;
+  line-height: 24pt;
+  color: white;
+  margin-bottom: 0.75em;
+}
+
+.home-header-space-science-text {
+  font-family: 'Roboto Book', sans-serif;
+  font-size: 64pt;
+  line-height: 52pt;
+  color: white;
+}
+
+.home-header-soc-text {
+  font-family: 'Roboto Thin', sans-serif;
+  font-size: 24pt;
+  color: white;
+}
+
+.home-header-sub-heading {
+	padding: 0px;
+	margin-top: 2.0em;
+	font-size: 42pt;
+	font-weight: 400;
+  text-align: left;
+  color: white;
 }

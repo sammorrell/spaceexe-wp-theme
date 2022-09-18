@@ -1,6 +1,4 @@
 <div class='container' id='header-container'>
-	<a id='menu-logo-container' href='<?php echo get_site_url(); ?>'>
-	</a>
 	<div id='header-menu-spacer'>
 		<div id='header-menu-container'>
 			<?php wp_nav_menu( 

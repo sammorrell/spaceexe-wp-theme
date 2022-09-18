@@ -4,38 +4,17 @@
 	font-size: 12pt;
 }
 
-#menu-logo-container {
-	display: block;
-	background-color: rgba(0, 0, 0, 0.75);
-	background-image: url('../img/menu-logo.png');
-	background-size: 80%;
-	background-repeat: no-repeat;
-	background-position: center;
-	position: absolute;
-	width: 10em;
-	left: 0;
-	top: 0;
-	bottom: 0;
-	filter: invert(0);
-	transition: filter 0.2s;
-
-	&:hover {
-		filter: invert(1);
-	}
-}
-
 #header-menu-spacer {
 	position: absolute;
-	left: 10em;
+	left: 0;
 	right: 0;
 	top: 0;
 	bottom: 0;
 }
 
 #header-menu-container {
-	background: rgba(255, 255, 255, 0.75);
 	letter-spacing: 0;
-	text-align: right;
+	text-align: left;
 	font-size: 0;
 
 	.menu {
@@ -48,14 +27,14 @@
 		list-style: none;
 		height: 100%;
 		display: inline-block;
-		text-align: right;
+		text-align: left;
 		font-size: 0;
 
 		li.current-menu-item {
 			a {
 				background-color: rgba(0, 0, 0, 0.5);
 				color: rgba(255, 255, 255, 0.8);
-				text-decoration: none;
+				text-decoration: None;
 			}
 		}
 	}
@@ -67,12 +46,13 @@
 		margin: 0px;
 		padding: 0px;
 		font-size: 12pt;
+		overflow: visible;
+		position: relative;
 
 		a {
 			display: block;
 			height: 100%;
-			vertical-align: middle;
-			color: rgba(0, 0, 0, 0.8);
+			color: rgba(255, 255, 255, 0.8);
 			padding-left: 1em;
 			padding-right: 1em;
 			transition: background-color 0.2s;
@@ -84,15 +64,47 @@
 			}
 		}
 
-		ul {
+		ul.sub-menu {
+			line-height: 5em;
+			position: absolute;
 			display: none;
+			left: 0;
+			background: rgba(255, 255, 255, 0.75);
+			text-align: left;
+			min-width: 100%;
+			min-width: 10rem;
+			width: auto;
+			height: auto;
+			z-index: 100;
+
+			li {
+				width: 100%;
+				height: auto;
+				line-height: 2em;
+
+				ul.sub-menu {
+					position: absolute;
+					right: -100%;
+				}
+
+				a {
+					padding: 1em;
+				}
+			}
+		}
+
+		&:hover {
+			ul.sub-menu {
+				display: inline;
+			}
 		}
 	}
 
 	#search-icon {
-		display: inline-block;
-		color: black;
+		display: block;
+		color: white;
 		padding: 0 20px 0 20px;
+		float: right;
 
 		&:hover {
 			background-color: #301934;
