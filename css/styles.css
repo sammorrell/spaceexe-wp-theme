@@ -7389,49 +7389,62 @@ html, body {
       background-color: rgba(0, 0, 0, 0.5);
       color: rgba(255, 255, 255, 0.8);
       text-decoration: None; }
-  #header-menu-container .menu-item {
-    display: inline-block;
-    height: 100%;
-    line-height: 5em;
-    margin: 0px;
-    padding: 0px;
-    font-size: 12pt;
-    overflow: visible;
-    position: relative; }
-    #header-menu-container .menu-item a {
-      display: block;
+    #header-menu-container ul .menu-item {
+      display: inline-block;
       height: 100%;
-      color: rgba(255, 255, 255, 0.8);
-      padding-left: 1em;
-      padding-right: 1em;
-      transition: background-color 0.2s; }
-      #header-menu-container .menu-item a:hover {
-        background-color: #301934;
-        color: rgba(255, 255, 255, 0.8);
-        text-decoration: none; }
-    #header-menu-container .menu-item ul.sub-menu {
       line-height: 5em;
-      position: absolute;
-      display: none;
-      left: 0;
-      background: rgba(255, 255, 255, 0.75);
-      text-align: left;
-      min-width: 100%;
-      min-width: 10rem;
-      width: auto;
-      height: auto;
-      z-index: 100; }
-      #header-menu-container .menu-item ul.sub-menu li {
-        width: 100%;
+      margin: 0px;
+      padding: 0px;
+      font-size: 12pt;
+      overflow: visible;
+      position: relative; }
+      #header-menu-container ul .menu-item > a {
+        display: block;
+        height: 100%;
+        color: rgba(255, 255, 255, 0.8);
+        padding-left: 1em;
+        padding-right: 1em;
+        transition: background-color 0.2s; }
+        #header-menu-container ul .menu-item > a:after {
+          content: "";
+          background-color: rgba(234, 88, 165, 0.9);
+          width: 0;
+          height: 0.1em;
+          display: block;
+          margin-top: -1.8em;
+          border-radius: 2px;
+          box-shadow: 0 0 6px 1px #eab0cd;
+          opacity: 0.0;
+          transition: opacity 0.3s ease-in-out, width 0.3s ease-in-out; }
+        #header-menu-container ul .menu-item > a:hover {
+          color: rgba(255, 255, 255, 0.8);
+          text-decoration: none; }
+          #header-menu-container ul .menu-item > a:hover:after {
+            opacity: 1.0;
+            width: 100%; }
+      #header-menu-container ul .menu-item ul.sub-menu {
+        line-height: 5em;
+        position: absolute;
+        display: none;
+        left: 0;
+        background: rgba(255, 255, 255, 0.75);
+        text-align: left;
+        min-width: 100%;
+        min-width: 10rem;
+        width: auto;
         height: auto;
-        line-height: 2em; }
-        #header-menu-container .menu-item ul.sub-menu li ul.sub-menu {
-          position: absolute;
-          right: -100%; }
-        #header-menu-container .menu-item ul.sub-menu li a {
-          padding: 1em; }
-    #header-menu-container .menu-item:hover ul.sub-menu {
-      display: inline; }
+        z-index: 100; }
+        #header-menu-container ul .menu-item ul.sub-menu li {
+          width: 100%;
+          height: auto;
+          line-height: 2em; }
+          #header-menu-container ul .menu-item ul.sub-menu li ul.sub-menu {
+            position: absolute;
+            right: -100%; }
+          #header-menu-container ul .menu-item ul.sub-menu li a {
+            padding: 1em; }
+      #header-menu-container ul .menu-item:hover ul.sub-menu {
+        display: inline; }
   #header-menu-container #search-icon {
     display: block;
     color: white;
