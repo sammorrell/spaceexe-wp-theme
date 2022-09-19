@@ -1,15 +1,14 @@
 // Global Variables
-$footer_size: 150px;
+$footer_size: 300px;
 
 html, body {
   font-family: 'Roboto', sans-serif;
   font-size: 21px;
   line-height: 1.52;
   text-rendering: optimizeLegibility;
-  height: 100%;
+  min-height: 100%;
   width: 100%;
   margin: 0;
-  min-height: 100%;
   padding: 0px;
 }
 
@@ -26,22 +25,22 @@ html, body {
 }
 
 .background-cover {
-  background-size: cover;
-  background-repeat: no-repeat;
-  filter: brightness(60%) saturate(125%) blur(10px);
-  position: fixed;
-  top: 0px;
+  /*background-color: rgba(0, 0, 0, 0.8); */
+	color: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  top: 10rem;
   bottom: 0px;
   left: 0px;
   right: 0px;
   z-index: -1;
-  opacity: 0.0;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.0) 0, rgba(0, 0, 0, 0.8) 20rem, rgba(0, 0, 0, 0.8) 100%);
 }
 
 #footer-spacer {
-  min-height: 100%;
-  margin-bottom: -($footer_size + 20px);
-  padding-bottom: 20px;
+  margin-bottom: -$footer_size;
+  padding-bottom: $footer_size + 50px;
+  min-height: 100vh;
+  position: relative;
 }
 
 .background-cover.show-background {

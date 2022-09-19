@@ -13,20 +13,21 @@
 	height: 30%;
 	width: 100%;
 	display: block;
+	margin-top: 2rem;
 }
 
 .header-logo {
 	display: block;
 	width: 100%;
+	transform: scale(130%);
 }
 
 @media screen and (min-aspect-ratio: 4/3) {
 	.header-container {
-		width: 70%;
+		width: 80%;
 	}
 
 	.header-vertical-spacer {
-		height: 15%;
 		width: 100%;
 		display: block;
 	}
