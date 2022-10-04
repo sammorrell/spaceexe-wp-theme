@@ -7350,9 +7350,10 @@ html, body {
 .footer-container {
   color: #FFF;
   padding: 0px;
-  margin: 0px 5rem;
-  height: 300px;
-  border-top: 1px solid rgba(255, 255, 255, 0.4); }
+  margin: 0px;
+  min-height: 300px;
+  backdrop-filter: blur(5px);
+  background: #120e16; }
 
 .footer-copyright {
   margin-bottom: 0px;
@@ -7580,6 +7581,10 @@ html, body {
   font-weight: 400;
   text-align: left;
   color: white; }
+
+.homepage-container {
+  color: white;
+  margin-bottom: 5rem; }
 
 .page-title-container {
   background-color: #fafaff;
